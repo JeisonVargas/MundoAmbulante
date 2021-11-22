@@ -1,0 +1,694 @@
+
+@import url(//db.onlinewebfonts.com/c/002b944b211d383987536f1ecf684bca?family=Herculanum);
+/*
+@font-face {
+  font-family: "Herculanum Regular";
+  src: url(./fonts/Herculanum-Regular2.ttf);
+  font-weight: normal;
+  font-style: normal;
+}*/
+
+@font-face {
+  font-family: "Roboto Regular";
+  src: url(./fonts/roboto/Roboto-Regular.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+	margin: 0;
+	background-color: #e6dbd8;
+}
+
+p {
+	margin: 0;
+}
+
+header {
+	width: 100%;
+	position: fixed;
+	display: flex;
+	justify-content: center;
+	top: 0;
+	z-index: 10;
+}
+
+.header_container {
+	width: 100%;
+	max-width: 1440px;
+	padding: 30px 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: #e6dbd8;
+}
+
+.image_menu {
+	width: 30px;
+	height: 35px;
+	cursor: pointer;
+}
+
+.container_menu {
+	position: relative;
+	margin-left: 128px;
+}
+
+.menu {
+	position: absolute;
+	border: 1px solid #26171a;
+	top: 0px;
+	left: 35px;
+	display: flex;
+	border-left: none;
+	border-top-right-radius: 20px;
+	border-bottom-right-radius: 20px;
+	opacity: 0;
+}
+
+.container_menu:hover .menu{
+	animation: show_menu 2s;
+	opacity: 1;
+}
+
+
+.menu_text {
+	font-family: "Herculanum";
+	font-size: 24px;
+	padding: 5px 10px;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.cap_container {
+	display: flex;
+	align-items: center;
+	margin-right: 128px;
+}
+
+.cap_text {
+	font-family: "Herculanum";
+	color: #26171a;
+	font-size: 20px;
+	padding: 0 10px;
+}
+
+.image_logo {
+	width: 146px;
+	height: 35px;
+	border-left: 1px solid #26171a;
+	padding: 0 10px;
+}
+
+.container_general {
+	margin: 95px 0 0;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.container_general.calle1 {
+	background-image: url("img/Calle1.png");
+	background-repeat: no-repeat;
+	background-position: 50% 100%;
+	background-size: 1440px;
+	background-attachment: fixed;
+}
+
+.container_general.calle2 {
+	background-image: url("img/Calle2.png");
+	background-repeat: no-repeat;
+	background-size: 1440px;
+	background-attachment: fixed;
+}
+
+.container_general.calle2.init {
+	background-position: 50% 100%;
+}
+
+.container_general.calle2.move {
+	background-position: 50% 84%;
+	animation: mover_calle 1s;
+}
+
+.container_general.video {
+	background-image: url("img/VideoMexicano3.gif");
+	background-repeat: no-repeat;
+	background-position: 50% 48%;
+	background-size: 1160px;
+	background-attachment: fixed;
+}
+
+.escenas_container {
+	width: 1440px;
+	height: calc(100vh - 95px);
+	position: relative;
+	margin: 5px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.escena1_container {
+	width: 1440px;
+	position: relative;
+	margin: 5px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.escena1_titulo {
+	font-family: "Herculanum";
+	font-size: 60px;
+	width: 508px;
+	text-align: center;
+}
+
+.escena1_container_button {
+	width: 71px;
+	height: 71px;
+	margin-top: 20px;
+	position: relative;
+	z-index: 3;
+}
+
+.escena1_button {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 2;
+}
+
+.escena1_sombra {
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	position: absolute;
+	top: 5px;
+	right: -5px;
+	z-index: 1;
+}
+
+.escena3_container_button {
+	width: 71px;
+	height: 71px;
+	margin-top: 20px;
+	position: relative;
+	align-self: start;
+	margin-left: 350px;
+}
+
+.escena3_button {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 2;
+}
+
+.escena3_sombra {
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	position: absolute;
+	top: 5px;
+	right: -5px;
+	z-index: 1;
+}
+
+.space-top {
+	width: 100%;
+	height: 160px;
+}
+
+.escena2_titulo {
+	font-family: "Herculanum";
+	font-size: 60px;
+	text-align: center;
+}
+
+.escena4_titulo {
+	font-family: "Herculanum";
+	font-size: 60px;
+	text-align: center;
+	color: white;
+}
+
+.escena2_texto {
+	font-family: "Roboto Regular";
+	font-size: 18px;
+	width: 1000px;
+	margin-top: 40px;
+}
+
+.escena2_texto_aux {
+	font-family: "Herculanum";
+	font-size: 18px;
+	width: 1000px;
+	margin-top: 40px;
+	margin-left: 60px;
+	text-align: center;
+}
+
+.escena3_texto {
+	font-family: "Roboto Regular";
+	font-size: 18px;
+	width: 600px;
+	margin-top: 40px;
+	align-self: flex-start;
+	margin-left: 100px;
+}
+
+.escena4_texto {
+	font-family: "Roboto Regular";
+	font-size: 18px;
+	width: 1000px;
+	margin-top: 40px;
+	color: white;
+	text-align: center;
+}
+
+.container_buttons {
+	width: 600px;
+	margin-top: 40px;
+	margin-left: 60px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.camino_container {
+	position: relative;
+}
+
+.camino {
+	z-index: 2;
+}
+
+.sombra_tranquilo {
+	width: 100%;
+	height: 100%;
+	border-top-left-radius: 50px 50px;
+  border-bottom-left-radius: 50px 50px;
+  border-top-right-radius: 50px 50px;
+  border-bottom-right-radius: 50px 50px;
+	position: absolute;
+	top: 5px;
+	right: -5px;
+	z-index: -1;
+}
+
+.sombra_tormentoso {
+	width: 100%;
+	height: 100%;
+	border-top-left-radius: 50px 50px;
+  border-bottom-left-radius: 50px 50px;
+  border-top-right-radius: 50px 50px;
+  border-bottom-right-radius: 50px 50px;
+	position: absolute;
+	top: 5px;
+	right: -5px;
+	z-index: -1;
+}
+
+.camino_container:hover .sombra_tranquilo {
+	background-color: #459f78;
+
+}
+
+.camino_container:hover .sombra_tormentoso {
+	background-color: #d64d61;
+}
+
+.escena1_container_button:hover .escena1_sombra {
+	background-color: #f8d95f;
+}
+
+.escena3_container_button:hover .escena3_sombra {
+	background-color: #f8d95f;
+}
+
+.escena1_calle1 {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+
+.escena1_carrito {
+	position: fixed;
+	top: 327px;
+	left: 33.5%;
+}
+
+.escena1_carrito.hide {
+	opacity: 0;
+}
+
+.mexicano1 {
+	position: fixed;
+	top: 498px;
+	left: -0.5%;
+	opacity: 0;
+}
+
+.mexicano1.hide {
+	opacity: 0 !important;
+}
+
+.mexicano2 {
+	position: fixed;
+	top: 442px;
+	left: 48%;
+	width: 190px;
+}
+
+.mexicano2.hide {
+	opacity: 0 !important;
+}
+
+.mexicano3 {
+	position: fixed;
+	top: 442px;
+	left: 48%;
+	width: 190px;
+}
+
+.mexicano3.hide {
+	opacity: 0 !important;
+}
+
+.mexicano4 {
+	position: fixed;
+	top: 415px;
+	left: 48%;
+	width: 190px;
+}
+
+.mexicano4.hide {
+	opacity: 0 !important;
+}
+
+.mexicano5 {
+	position: fixed;
+	left: 47%;
+	width: 190px;
+}
+
+.mexicano5.init {
+	top: 415px;
+}
+
+.mexicano5.move {
+	top: 295px;
+	animation: mover_mexicano5 1s;
+}
+
+.mexicano6 {
+	position: fixed;
+	top: 415px;
+	left: 48%;
+	width: 190px;
+}
+
+.mexicano6.hide {
+	opacity: 0 !important;
+}
+
+.mexicano7 {
+	position: fixed;
+	top: 415px;
+	left: 45%;
+	width: 250px;
+}
+
+.mexicano7.hide {
+	opacity: 0 !important;
+}
+
+.mexicano8 {
+	position: fixed;
+	top: 430px;
+	left: 61%;
+	width: 190px;
+}
+
+.mexicano9 {
+	position: fixed;
+	top: 410px;
+	left: 58%;
+	width: 255px;
+}
+
+.mexicano9.hide {
+	opacity: 0 !important;
+}
+
+.mexicano10 {
+	position: fixed;
+	top: 215px;
+	left: 53%;
+	width: 460px;
+}
+
+.mexicano10.hide {
+	opacity: 0 !important;
+}
+
+.mexicano11 {
+	position: fixed;
+	top: 480px;
+	left: 64%;
+	width: 138px;
+}
+
+.mexicano11.hide {
+	opacity: 0 !important;
+}
+
+.persona2 {
+	position: fixed;
+	top: 405px;
+	left: 57%;
+	width: 290px;
+}
+
+.deudas {
+	position: fixed;
+	top: 500px;
+	left: 19%;
+}
+
+.deudas.hide {
+	opacity: 0 !important;
+}
+
+.ventana {
+	position: fixed;
+	top: 120px;
+	left: 50%;
+	width: 600px;
+}
+
+.ventana.hide {
+	opacity: 0 !important;
+}
+
+.persona {
+	position: fixed;
+	top: 120px;
+	left: 20%;
+	width: 600px;
+}
+
+.planta {
+	position: fixed;
+	top: 495px;
+	left: 53%;
+	width: 190px;
+}
+
+.planta.hide {
+	opacity: 0 !important;
+}
+
+
+.letrero {
+	position: fixed;
+	top: 435px;
+	left: 51%;
+	width: 230px;
+}
+
+.letrero.hide {
+	opacity: 0 !important;
+}
+
+.sillon {
+	position: fixed;
+	left: 41.3%;
+	width: 400px;
+}
+
+.sillon.init {
+	top: 480px;
+}
+
+.sillon.move {
+	top: 360px;
+	animation-name: mover_sillon 1s;
+}
+
+.sillon.hide {
+	opacity: 0 !important;
+}
+
+.tv {
+	position: fixed;
+	top: 325px;
+	left: 31%;
+	width: 800px;
+}
+
+.tv.hide {
+	opacity: 0 !important;
+}
+
+.space-bottom {
+	width: 100%;
+	height: 500px;
+}
+
+.space-bottom2 {
+	width: 100%;
+	height: 300px;
+}
+
+.space-bottom3 {
+	width: 100%;
+	height: 100px;
+}
+
+footer {
+	width: 100%;
+	background-color: #26171a;
+	display: flex;
+	justify-content: center;
+}
+
+.footer_continer {
+	width: 100%;
+	max-width: 1440px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px 0;
+}
+
+.footer_text_container {
+	margin-left: 128px;
+	display: flex;
+	align-items: center;
+}
+
+.image_logo_blanco {
+	width: 146px;
+	height: 35px;
+	padding: 0 10px;
+}
+
+.text_footer {
+	color: white;
+	width: 480px;
+	font-size: 14px;
+	margin-left: 20px;
+  font-family: "Roboto Regular";
+}
+
+.social_media_container {
+	margin-right: 128px;
+}
+
+.instagram_container {
+	display: flex;
+	align-items: center;
+	text-decoration: none;
+	margin: 10px;
+}
+
+.image_instagram {
+	width: 22px;
+	height: 22px;
+	cursor: pointer;
+}
+
+.text_username {
+	color: white;
+	font-size: 16px;
+	cursor: pointer;
+	margin-left: 10px;
+}
+
+[data-aos="mover-carrito1"] {
+	left: 33.5%;
+  transition-property: left;
+}
+
+[data-aos="mover-carrito1"].aos-animate {
+	left: 10.5%;
+}
+
+[data-aos="mover-mexicano1"] {
+	left: -0.5%;
+	opacity: 0;
+  transition-property: left, opacity;
+}
+
+[data-aos="mover-mexicano1"].aos-animate {
+	opacity: 1;
+	left: 22.5%;
+}
+
+@keyframes mover_calle {
+  from {
+    background-position: 50% 100%;
+  }
+
+  to {
+    background-position: 50% 84%;
+  }
+}
+
+@keyframes mover_sillon {
+  from {
+    top: 480px;
+  }
+
+  to {
+    top: 360px;
+  }
+}
+
+@keyframes mover_mexicano5 {
+  from {
+    top: 415px;
+  }
+
+  to {
+    top: 295px;
+  }
+}
+
+@keyframes show_menu {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    top: 1;
+  }
+}
+
