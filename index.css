@@ -109,7 +109,7 @@ header {
 }
 
 .container_general.calle1 {
-	background-image: url("img/Calle1.png");
+	background-image: url("https://mundoambulante.s3.amazonaws.com/Calle1.png");
 	background-repeat: no-repeat;
 	background-position: 50% 100%;
 	background-size: 1440px;
@@ -117,7 +117,7 @@ header {
 }
 
 .container_general.calle2 {
-	background-image: url("img/Calle2.png");
+	background-image: url("https://mundoambulante.s3.amazonaws.com/Calle2.png");
 	background-repeat: no-repeat;
 	background-size: 1440px;
 	background-attachment: fixed;
